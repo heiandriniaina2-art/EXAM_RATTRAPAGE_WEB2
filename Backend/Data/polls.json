@@ -1,0 +1,14 @@
+{
+  "polls": [
+    {
+      "id": "3f1c2a9e-…",
+      "question": "Quel framework pour le prochain projet ?",
+      "createdAt": "2026-09-15T08:00:00.000Z",
+      "choices": [
+        { "id": "c1a7…", "label": "React", "votes": 3 },
+        { "id": "9b02…", "label": "Vue", "votes": 1 },
+        { "id": "e4d5…", "label": "Svelte", "votes": 0 }
+      ]
+    }
+  ]
+}
