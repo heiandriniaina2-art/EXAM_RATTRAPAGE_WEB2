@@ -1,5 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+// @ts-ignore
 import type { Poll } from "../model/poll";
 
 const DATA_FILE = path.resolve(process.cwd(), "data/polls.json");

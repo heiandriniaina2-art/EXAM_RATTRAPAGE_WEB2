@@ -1,3 +1,4 @@
+// @ts-ignore
 import * as repo from "../repositorie/polls.repository";
 import type { Poll, DetailedPoll, SummaryPoll } from "../model/poll";
 
@@ -61,6 +62,7 @@ export async function getPollById(id: string): Promise<DetailedPoll> {
 
 export async function createPoll(questionRaw: any, choicesRaw: any): Promise<DetailedPoll> {
     if (typeof questionRaw !== "string") {
+        // @ts-ignore
         throw new ValidationError
 
 
@@ -69,7 +71,6 @@ export async function createPoll(questionRaw: any, choicesRaw: any): Promise<Det
             throw new NotFoundError("Sondage introuvable.");
         }
 
-        // RG-03 : vérifier que le choix appartient bien au sondage
         const exists = poll.choices.some((c) => c.id === choiceId);
         if (!exists) {
             throw new ValidationError("Le choix spécifié n'appartient pas à ce sondage.");

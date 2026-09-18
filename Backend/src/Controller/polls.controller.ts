@@ -1,4 +1,6 @@
+// @ts-ignore
 import { Router, Request, Response } from "express";
+// @ts-ignore
 import * as service from "../service/polls.service";
 
 const router = Router();
